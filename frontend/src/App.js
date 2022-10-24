@@ -1,25 +1,22 @@
-import logo from './logo.svg';
 import './App.css';
+import {Col, Container, Row} from "react-bootstrap";
+import AdditionForm from "./components/AdditionForm";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <Container>
+            <Row className="bg-dark w-100">
+                <Col className="mx-auto w-100 text-center">
+                    <h1 className="text-white">Calculatrice web</h1>
+                </Col>
+            </Row>
+            <Row>
+                <Col>
+                    <AdditionForm />
+                </Col>
+            </Row>
+        </Container>
+    );
 }
 
 export default App;
