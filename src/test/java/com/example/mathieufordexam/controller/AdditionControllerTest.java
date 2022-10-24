@@ -57,7 +57,8 @@ public class AdditionControllerTest {
 
                 //Assert
                 .andExpect(status().isOk())
-                .andExpect(jsonPath("$.result").value(additionDtoIn1.getFirstNumber() + additionDtoIn1.getSecondNumber()));
+                .andExpect(jsonPath("$.result")
+                        .value(additionDtoIn1.getFirstNumber() + additionDtoIn1.getSecondNumber()));
     }
 
     @Test
